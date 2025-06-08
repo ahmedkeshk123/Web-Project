@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Contact Us.css">
+    <title>Contact Us</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="contact-form">
+            <h1>Contact Us</h1>
+            <form action="#" onsubmit="return validate()" method="post">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Your Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <div id="errorMessages" class="error"></div>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        function validate() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+            var error_message = document.getElementById("error_message");
+
+            error_message.style.padding = "10px";
+
+            var text;
+            if (name.length < 5) {
+                text = "Please Enter valid Name";
+                error_message.innerHTML = text;
+                return false;
+            }else {
+                // Check if the name contains only letters
+                var name = /^[a-zA-Z]+$/;
+                if (!name.test(name)) {
+                    displayError("Name should contain only letters");
+                    return false;
+                }
+            }
+            if (email.indexOf("@") == -1 || email.length < 6) {
+                text = "Please Enter valid Email";
+                error_message.innerHTML = text;
+                return false;
+            }
+            if (message.length <= 140) {
+                text = "Please Enter More Than 140 Characters";
+                error_message.innerHTML = text;
+                return false;
+            }
+            alert("Form Submitted Successfully!");
+            return true;
+        }
+    </script>
+</body>
+
+</html>

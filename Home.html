@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Home.css">
+  <title>Home</title>
+</head>
+
+<body>
+  <div class="banner">
+    <div class="navbar">
+
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a target="_blank" href="Core Functionality.html">Core Functionality</a></li>
+        <li><a target="_blank" href="dashboerd.html">dashboerd</a></li>
+        <li><a target="_blank" href="Gold Mine Maps.html">Gold Mine Maps</a></li>
+        <li><a target="_blank" href="ABOUT US .html">ABOUT US</a></li>
+        <li><a target="_blank" href="Contact Us.html">Contact Us</a></li>
+      </ul>
+
+    </div>
+    <div class="content">
+      <h1>Volcanic Gold Mines</h1>
+      <div>
+        <button type="button" class="B" onclick="showSignInForm()"><span></span> SIGN IN</button>
+        <BUtton type="button"> <span></span>LOG IN</BUtton>
+      </div>
+      
+    </div><div class="login-box" id="signInForm">
+      <form action="chosee.html" method="post" onsubmit="return validateForm()">
+          <div class="user-box">
+            <!-- <label for="username">Username:</label> -->
+
+            <input type="text" id="username" name="username" required>
+            <label for="username">Username:</label>
+          </div>
+          <div class="user-box">
+
+            <input type="password" id="password" name="password" required>
+            <label for="password">Password:</label>
+          </div>
+          <div class="user-box">
+
+            <input type="email" id="email" name="email" required>
+            <label for="email">Email:</label>
+          </div>
+
+          <input type="submit" value="Submit" id="hiddenSubmit" style="display: none;">
+          <a href="#" onclick="submitForm()">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Submit
+          </a>
+
+        </form>
+      </div>
+  </div>
+
+  </div>
+  </div>
+  <script>
+    function submitForm() {
+      // Trigger the form submission by clicking the hidden submit button
+      document.getElementById('hiddenSubmit').click();
+    }
+
+    function showSignInForm() {
+      // Show the Sign In form when the button is clicked
+      document.getElementById('signInForm').style.display = 'block';
+
+      var element = document.querySelector('.login-box');
+
+      element.style.display = 'block';
+    }
+
+    function validateForm() {
+      // You can add your validation logic here
+      var username = document.getElementById('username').value;
+      var password = document.getElementById('password').value;
+      var email = document.getElementById('email').value;
+
+      // Example: Simple validation to check if fields are not empty
+      if (username === '' || password === '' || email === '') {
+        alert('All fields must be filled out');
+        return false; // Prevent form submission
+      }
+      
+
+      // Additional validation logic can be added as needed
+    }
+  </script>
+</body>
+
+</html>

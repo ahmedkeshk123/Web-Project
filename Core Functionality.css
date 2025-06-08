@@ -1,0 +1,112 @@
+h1 {
+    text-align: center;
+}
+
+/* body {
+    margin: 0;
+    padding: 0;
+    background: url('pic/pexels-tom-fisk-2101135.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 120vh;
+
+} */
+.background2{
+    background-image: url(pic/pexels-tom-fisk-2101135.jpg);
+    background-size: cover;
+}
+
+h5 {
+    color: gold;
+}
+
+.card-body {
+    font-size: x-small;
+    font-weight: bold;
+    color: white;
+}
+
+.centered-container {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.grid-container {
+    margin-top: 20px;
+}
+
+.grid-item {
+    margin-bottom: 20px;
+}
+
+.card1:hover,
+.card2:hover,
+.card3:hover,
+.card4:hover,
+.card5:hover,
+.card6:hover,
+.card7:hover,
+.card8:hover {
+    transform: scale(1.05);
+}
+
+.card1,
+.card2,
+.card3,
+.card4,
+.card5,
+.card6,
+.card7,
+.card8 {
+    background-color: #ffff;
+    margin: 10px;
+    border-radius: 10px;
+}
+.card1 {
+    background-image: url('pic/download\ \(1\).jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.card2 {
+    background-image: url('pic/istockphoto-896157870-612x612.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.card3 {
+    background-image: url('pic/Prospecting.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.card4 {
+    background-image: url('pic/Granulation\ And\ Grinding.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.card5 {
+    background-image: url('pic/Gold\ Extraction.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+.card6 {
+    background-image: url('pic/Gold\ Refining.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.card7 {
+    background-image: url('pic/Export.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.card8 {
+    background-image: url('pic/Follow-up\ And\ Monitoring.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+.background{
+    background-color: rgba(10, 5, 5, 0.54);
+}
+.background3{
+    background-color: rgba(0, 0, 0, 0.748);
+}
